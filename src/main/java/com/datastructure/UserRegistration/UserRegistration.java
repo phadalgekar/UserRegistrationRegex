@@ -21,6 +21,8 @@ public class UserRegistration {
         String password1 = scan.nextLine();
         System.out.println("Enter the at least one numeric Number: ");
         String password2 = scan.nextLine();
+        System.out.println("Enter the Special character password: ");
+        String password3 = scan.nextLine();
 
         if (Pattern.matches("^[A-Z][a-z]{2,}", firstName)) {
             System.out.println("True");
@@ -64,7 +66,14 @@ public class UserRegistration {
         } else {
             System.out.println("False");
         }
+     // Special Character Password
+        if (Pattern.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$", password3)) {
+            System.out.println("True");
+        } else {
+            System.out.println("False");
+        }
         scan.close();
 	}
 }
+	
         
