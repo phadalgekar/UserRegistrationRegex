@@ -15,6 +15,8 @@ public class UserRegistration {
         String mail = scan.nextLine();
         System.out.println("Enter The Mobile Number With County Code : ");
         String mobileNumber = scan.nextLine();
+        System.out.println("Enter the valid password: ");
+        String password = scan.nextLine();
 
         if (Pattern.matches("^[A-Z][a-z]{2,}", firstName)) {
             System.out.println("True");
@@ -40,10 +42,17 @@ public class UserRegistration {
         } else {
             System.out.println("False");
         }
+     // Check 8 character password 
+        if (Pattern.matches("^[A-Za-z1-8]{8}", password)) {
+            System.out.println("True");
+        } else {
+            System.out.println("False");
+        }
         scan.close();
 	}
 }
 
+	
 	
 
 	
