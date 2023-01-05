@@ -19,7 +19,8 @@ public class UserRegistration {
         String password = scan.nextLine();
         System.out.println("Enter the password at least one upper case: ");
         String password1 = scan.nextLine();
-
+        System.out.println("Enter the at least one numeric Number: ");
+        String password2 = scan.nextLine();
 
         if (Pattern.matches("^[A-Z][a-z]{2,}", firstName)) {
             System.out.println("True");
@@ -57,18 +58,13 @@ public class UserRegistration {
         } else {
             System.out.println("False");
         }
+     // Numeric number in password
+        if (Pattern.matches("^[A-Z][a-z0-9]{7}", password2)) {
+            System.out.println("True");
+        } else {
+            System.out.println("False");
+        }
         scan.close();
 	}
 }
         
-	
-
-
-
-	
-	
-
-	
-
-	
-
